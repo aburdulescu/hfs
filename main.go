@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"log"
 	"net/http"
 )
@@ -14,6 +15,10 @@ func main() {
 	flag.Parse()
 
 	fileServer := http.FileServer(http.Dir(dir))
+
 	http.Handle("/", fileServer)
+
+	fmt.Printf("serving files from %s on %s\n", dir, addr)
+
 	log.Fatal(http.ListenAndServe(addr, nil))
 }
