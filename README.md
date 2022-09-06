@@ -6,13 +6,7 @@ HTTP file server
 Install golang and then run:
 
 ```
-go get -u github.com/aburdulescu/hfs
-```
-
-If you want a smaller binary:
-
-```
-go get -u -ldflags="-s -w" github.com/aburdulescu/hfs
+go install bandr.me/p/hfs@latest
 ```
 
 ## Usage
